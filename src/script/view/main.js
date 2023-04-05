@@ -16,7 +16,7 @@ const main = () => {
   };
 
   const renderResult = results => {
-    clubListElement.ingredients = results;
+    clubListElement.DrinksList = results;
   };
 
   const fallbackResult = message => {
@@ -26,4 +26,6 @@ const main = () => {
   searchElement.clickEvent = onButtonSearchClicked;
 };
 
+
 export default main;
+

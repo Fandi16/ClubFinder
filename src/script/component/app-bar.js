@@ -20,16 +20,18 @@ class AppBar extends HTMLElement {
         :host {
           display: block;
           width: 100%;
-          background-color: cornflowerblue;
+          background-color: rgb(49, 27, 9);
           color: white;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
         h2 {
           padding: 16px;
         }
+        
+        
       </style>
       
-      <h2>Club Finder</h2>
+      <h2>TheCocktailDB</h2>
     `;
   }
 }

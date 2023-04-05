@@ -1,6 +1,6 @@
 import './club-item.js';
 
-class ClubList extends HTMLElement {
+class DrinksList extends HTMLElement {
 
   constructor() {
     super();
@@ -8,19 +8,19 @@ class ClubList extends HTMLElement {
   }
 
   /**
-   * @param {any} ingredients
+   * @param {any} drinks
    */
-  set ClubList(ingredients) {
-    this.ingredients = ingredients;
+  set DrinksList(drinks) {
+    this.drinks = drinks;
     this.render();
   }
 
   render() {
     this.shadowDOM.innerHTML = '';
 
-    this.ingredients.forEach((ingredients) => {
+    this.drinks.forEach((drinks) => {
       const clubItemElement = document.createElement('club-item');
-      clubItemElement.ingredients = ingredients;
+      clubItemElement.Drinks = drinks;
       this.shadowDOM.appendChild(clubItemElement);
     });
   }
@@ -43,4 +43,4 @@ class ClubList extends HTMLElement {
   }
 }
 
-customElements.define("club-list", ClubList);
+customElements.define("club-list", DrinksList);

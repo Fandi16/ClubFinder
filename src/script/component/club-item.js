@@ -1,4 +1,4 @@
-class ClubItem extends HTMLElement {
+class DrinksItem extends HTMLElement {
 
   constructor() {
     super();
@@ -6,10 +6,10 @@ class ClubItem extends HTMLElement {
   }
 
   /**
-   * @param {any} ingredients
+   * @param {any} drinks
    */
-  set Club(ingredients) {
-    this.ingredients = ingredients;
+  set Drinks(drinks) {
+    this.drinks = drinks;
     this.render();
   }
 
@@ -49,16 +49,17 @@ class ClubItem extends HTMLElement {
           -webkit-line-clamp: 10; /* number of lines to show */
         }
       </style>
-      
+      <img class="fan-art-club" src="${this.drinks.strDrinkThumb}" alt="Fan Art">
           
     <div class="club-info">
-      <h2>${this.ingredients.idIngredient}</h2>
-      <h2>${this.ingredients.strIngredient}</h2>
-      <p>${this.ingredients.strDescription}</p>
+      <h2>${this.drinks.idDrink}</h2>
+      <h2>${this.drinks.strDrink}</h2>
+      <p>${this.drinks.strInstructions}</p>
+      <p>${this.drinks.strInstructionsDE}</p>
+      <p>${this.drinks.strInstructionsIT}</p>
     </div>
     `;
   }
 }
 
-customElements.define("club-item", ClubItem);
-// <img class="fan-art-club" src="${this.ingredients.strTeamBadge}" alt="Fan Art">
+customElements.define("club-item", DrinksItem);
