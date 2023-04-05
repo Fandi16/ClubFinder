@@ -7,6 +7,9 @@ class ClubList extends HTMLElement {
     this.shadowDOM = this.attachShadow({mode: 'open'});
   }
 
+  /**
+   * @param {any} ingredients
+   */
   set ClubList(ingredients) {
     this.ingredients = ingredients;
     this.render();
